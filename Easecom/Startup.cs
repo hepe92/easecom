@@ -49,6 +49,7 @@ namespace Easecom
             app.UseDeveloperExceptionPage();
             app.UseAuthentication();
             app.UseMvc();
+            app.UseStaticFiles();
         }
     }
 }
