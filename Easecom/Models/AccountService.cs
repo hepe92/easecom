@@ -29,10 +29,10 @@ namespace Easecom.Models
         public async Task<bool> TryLoginAsync(AccountLoginVM viewModel)
         {
             //// Create DB schema (first time)
-            //var createSchemaResult = await identityContext.Database.EnsureCreatedAsync();
+            var createSchemaResult = await identityContext.Database.EnsureCreatedAsync();
 
             //// Create a hard coded user (first time)
-            //var createResult = await userManager.CreateAsync(new IdentityUser("user"), "Password_123");
+            var createResult = await userManager.CreateAsync(new IdentityUser("user"), "Password_123");
 
             var loginResult = await signInManager.PasswordSignInAsync(viewModel.Username, viewModel.Password, false, false);
             return loginResult.Succeeded;
