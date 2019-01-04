@@ -4,5 +4,5 @@
 <h3>Case</h3>
 @foreach (var caseInfo in Model.ItemVMs)
 {
-    <button asp-controller="Case" class="btn" asp-route-id="@caseInfo.Id" value="@caseInfo.Headline" ></button>
+<button asp-controller="Case" class="btn" asp-route-id="@caseInfo.Id">@caseInfo.Headline</button>
 }
