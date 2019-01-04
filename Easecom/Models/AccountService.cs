@@ -1,4 +1,5 @@
-﻿using Easecom.Models.ViewModels;
+﻿using Easecom.Models.Entities;
+using Easecom.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System;
@@ -18,12 +19,15 @@ namespace Easecom.Models
         public AccountService(
             IdentityDbContext identityContext,
             UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager
+            SignInManager<IdentityUser> signInManager,
+            EasecomContext context
+
             )
         {
             this.identityContext = identityContext;
             this.userManager = userManager;
             this.signInManager = signInManager;
+            var b = context.Database.EnsureCreated();
         }
 
         public async Task<bool> TryLoginAsync(AccountLoginVM viewModel)
