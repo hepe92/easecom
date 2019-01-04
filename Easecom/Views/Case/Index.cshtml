@@ -2,7 +2,19 @@
 @{ ViewBag.Title = "Case";}
 
 <h3>Case</h3>
-@foreach (var caseInfo in Model.ItemVMs)
-{
-<button asp-controller="Case" class="btn" asp-route-id="@caseInfo.Id">@caseInfo.Headline</button>
-}
+<div class="row">
+    @foreach (var caseInfo in Model.ItemVMs)
+    {
+        <div class="col-sm-12 col-md-4">
+            <a href="index.html">
+                <div class="card m-4" style="background-color: #5E5E5E; color: white; box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="font-weight: bold;">@caseInfo.Headline</h5>
+                        <p class="card-text"> @caseInfo.Description</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        //<button asp-controller="Case" class="btn" asp-route-id="@caseInfo.Id">@caseInfo.Headline</button>
+    }
+</div>
