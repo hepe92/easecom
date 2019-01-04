@@ -5,7 +5,7 @@
 <div class="row">
     @foreach (var caseInfo in Model.ItemVMs)
     {
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-4" colspan="3">
             <a href="index.html">
                 <div class="card m-4" style="background-color: #5E5E5E; color: white; box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);">
                     <div class="card-body text-center">
@@ -17,4 +17,25 @@
         </div>
         //<button asp-controller="Case" class="btn" asp-route-id="@caseInfo.Id">@caseInfo.Headline</button>
     }
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-sm-6">
+        <a>
+            <div class="card ml-4 mr-2 mt-4 mb-4" style="background-color: #FFB73A; font-weight: bold; color: white; box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="font-weight: bold;">CREATE</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-6 col-sm-6">
+        <a>
+            <div class="card ml-2 mr-4 mt-4 mb-4" style="background-color: #FFB73A; font-weight: bold; color: white; box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);">
+                <div class="card-body text-center">
+                    <h5 class="card-title" style="font-weight: bold;">CONTACTS</h5>
+                </div>
+            </div>
+        </a>
+    </div>
 </div>
