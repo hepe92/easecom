@@ -28,6 +28,13 @@ namespace Easecom.Controllers
         }
 
         [HttpGet]
+        [Route("Create")]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult Details()
         {
             return View();
