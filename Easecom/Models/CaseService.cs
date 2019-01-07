@@ -46,9 +46,20 @@ namespace Easecom.Models
             };
         }
 
-        //public async Task<CaseDetailsVM> GetCaseDetails(int id)
-        //{
+        public async Task<CaseDetailsVM> GetCaseDetailsByIdAsync(int id)
+        {
+            return await context.
+                CaseTable.
+                Select(o => new CaseDetailsVM
+                {
+                    Id = o.Id,
+                    Headline = o.Headline,
+                    Description = o.Description,
+                    Creator = o.Creator
 
-        //}
+                })
+
+                .SingleOrDefaultAsync(e => e.Id == id);
+        }
     }
 }
