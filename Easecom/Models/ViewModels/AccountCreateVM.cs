@@ -8,10 +8,10 @@ namespace Easecom.Models.ViewModels
 {
     public class AccountCreateVM
     {
-        [Required]
+        [Required(ErrorMessage ="Username needed")]
         public string Username { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Password needed")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
     }
