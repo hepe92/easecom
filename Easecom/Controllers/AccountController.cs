@@ -51,6 +51,20 @@ namespace Easecom.Controllers
                 return Redirect(viewModel.ReturnUrl);
         }
 
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public async Task<IActionResult> Create(AccountCreateVM viewModel)
+        {
+            if (!ModelState.IsValid)
+                return View(nameof(Login));
+
+            await accountService.AddAccountAsync(viewModel);
+            return RedirectToAction(nameof(Login));
+        }
     }
 }

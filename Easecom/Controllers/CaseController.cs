@@ -19,11 +19,12 @@ namespace Easecom.Controllers
             this.service = service;
         }
 
-            [HttpGet]
-            [Route("Case")]
-            public async Task<IActionResult> Index()
-            {
-                return View(await service.GetAllCasesAsync());
-            }   
+        [HttpGet]
+        [Authorize]
+        [Route("Case")]
+        public async Task<IActionResult> Index()
+        {
+            return View(await service.GetAllCasesAsync());
+        }   
     }
 }

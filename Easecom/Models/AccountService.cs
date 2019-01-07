@@ -41,5 +41,10 @@ namespace Easecom.Models
             var loginResult = await signInManager.PasswordSignInAsync(viewModel.Username, viewModel.Password, false, false);
             return loginResult.Succeeded;
         }
+
+        internal async Task AddAccountAsync(AccountCreateVM person)
+        {
+            await userManager.CreateAsync(new IdentityUser(person.Username), person.Password);
+        }
     }
 }
