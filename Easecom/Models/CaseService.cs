@@ -17,7 +17,7 @@ namespace Easecom.Models
             this.context = context;
         }
 
-        internal async Task AddCaseAsync(CaseCreateVM newCase)
+        internal async Task CreateCaseAsync(CaseCreateVM newCase)
         {
             context.CaseTable.Add(new CaseTable
             {
@@ -45,6 +45,8 @@ namespace Easecom.Models
                 .ToArrayAsync()
             };
         }
+
+
 
         //public async Task<CaseDetailsVM> GetCaseDetails(int id)
         //{

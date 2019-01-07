@@ -2,15 +2,15 @@
 @{ ViewBag.Title = "Create Case";}
 
 <div class="box" style="padding: 20px 50px 50px 50px; border-radius: 10px; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27); max-width: 80%; margin: 0 auto">
-    <form>
+    <form asp-controller="Case" asp-action="CreateCase" >
         <div class="form-group">
             <label for="headline" style="color: white;">Headline</label>
-            <input type="text" class="form-control" aria-describedby="emailHelp" placeholder="Input headline">
+            <input type="text" asp-for="Headline" class="form-control" aria-describedby="emailHelp" placeholder="Input headline">
             
         </div>
         <div class="form-group">
             <label for="description" style="color: white;">Description</label>
-            <input type="text" class="form-control" placeholder="Input description">
+            <input type="text" asp-for="Description" class="form-control" placeholder="Input description">
         </div>
         <button type="submit" class="btn btn-primary" style="background-color: #FFB73A">Submit</button>
     </form>

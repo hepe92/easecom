@@ -15,7 +15,7 @@ namespace Easecom.Models.ViewModels
         [Required(ErrorMessage = "Enter a Description!")]
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "Enter a creator name!")]
+        //[Required(ErrorMessage = "Enter a creator name!")]
         public string Creator { get; set; }
     }
 }

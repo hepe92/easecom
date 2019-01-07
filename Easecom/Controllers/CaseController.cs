@@ -34,6 +34,21 @@ namespace Easecom.Controllers
             return View();
         }
 
+        [HttpPost]
+        [Route("Createcase")]
+        public async Task<IActionResult> CreateCase(CaseCreateVM newCase)
+        {
+            newCase.Creator = User.Identity.Name;
+
+            if (!ModelState.IsValid)
+                return View(nameof(Index), await service.GetAllCasesAsync());
+            await service.CreateCaseAsync(newCase);
+            return RedirectToAction(nameof(Index));
+
+        }
+
+
+
         [HttpGet]
         [Route("Details")]
         public IActionResult Details()
