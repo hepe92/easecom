@@ -25,6 +25,13 @@ namespace Easecom.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await service.GetAllCasesAsync());
-        }   
+        }
+
+        [HttpGet]
+        [Route("Create")]
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
