@@ -42,9 +42,9 @@ namespace Easecom.Models
             return loginResult.Succeeded;
         }
 
-        internal async Task AddAccountAsync(AccountCreateVM person)
+        internal async Task AddAccountAsync(AccountCreateVM user)
         {
-            await userManager.CreateAsync(new IdentityUser(person.Username), person.Password);
+            await userManager.CreateAsync(new IdentityUser(user.Username), user.Password);
         }
     }
 }
