@@ -12,10 +12,10 @@ namespace Easecom.Models
     {
         private readonly EasecomContext context;
 
-            public CaseService(EasecomContext context)
-            {
-                this.context = context;
-            }
+        public CaseService(EasecomContext context)
+        {
+            this.context = context;
+        }
 
         internal async Task AddCaseAsync(CaseCreateVM newCase)
         {
@@ -45,5 +45,10 @@ namespace Easecom.Models
                 .ToArrayAsync()
             };
         }
+
+        //public async Task<CaseDetailsVM> GetCaseDetails(int id)
+        //{
+
+        //}
     }
 }
