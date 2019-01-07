@@ -18,23 +18,25 @@
         //<button asp-controller="Case" class="btn" asp-route-id="@caseInfo.Id">@caseInfo.Headline</button>
     }
 </div>
+
+
 <div class="row">
     <div class="col-md-6 col-sm-6">
-        <a>
+        <a asp-controller="Case" asp-action="Create">
             <div class="card m-4" style="background-color: #FFB73A; font-weight: bold; color: white; box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);">
                 <div class="card-body text-center">
                     <h5 class="card-title" style="font-weight: bold;">CREATE</h5>
                 </div>
             </div>
         </a>
-    </div>
-    <div class="col-md-6 col-sm-6">
-        <a>
-            <div class="card m-4" style="background-color: #FFB73A; font-weight: bold; color: white; box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);">
-                <div class="card-body text-center">
-                    <h5 class="card-title" style="font-weight: bold;">CONTACTS</h5>
+        </div>
+        <div class="col-md-6 col-sm-6">
+            <a>
+                <div class="card m-4" style="background-color: #FFB73A; font-weight: bold; color: white; box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" style="font-weight: bold;">CONTACTS</h5>
+                    </div>
                 </div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
 </div>

@@ -52,13 +52,15 @@ namespace Easecom.Controllers
         }
 
         [HttpGet]
-        public IActionResult Create()
+        [Route("Createaccount")]
+        public IActionResult CreateAccount()
         {
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(AccountCreateVM viewModel)
+        [Route("CreateAccount")]
+        public async Task<IActionResult> CreateAccount(AccountCreateVM viewModel)
         {
             if (!ModelState.IsValid)
                 return View(nameof(Login));
