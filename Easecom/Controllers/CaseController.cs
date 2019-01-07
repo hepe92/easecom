@@ -51,9 +51,9 @@ namespace Easecom.Controllers
 
         [HttpGet]
         [Route("Details")]
-        public IActionResult Details()
+        public async Task<IActionResult> Details(int id)
         {
-            return View();
+            return View(await service.GetCaseDetailsByIdAsync(id));
         }
 
     }

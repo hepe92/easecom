@@ -7,6 +7,8 @@ namespace Easecom.Models.ViewModels
 {
     public class CaseDetailsVM
     {
+        public int Id { get; set; }
+
         public string Headline { get; set; }
 
         public string Description { get; set; }
