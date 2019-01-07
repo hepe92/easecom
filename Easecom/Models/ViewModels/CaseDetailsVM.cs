@@ -7,5 +7,11 @@ namespace Easecom.Models.ViewModels
 {
     public class CaseDetailsVM
     {
+        public string Headline { get; set; }
+
+        public string Description { get; set; }
+
+        public string Creator { get; set; }
+
     }
 }
