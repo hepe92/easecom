@@ -33,5 +33,13 @@ namespace Easecom.Controllers
         {
             return View();
         }
+
+        [HttpGet]
+        [Route("Details")]
+        public IActionResult Details()
+        {
+            return View();
+        }
+
     }
 }
