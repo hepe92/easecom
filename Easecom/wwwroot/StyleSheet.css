@@ -94,3 +94,19 @@ img {
 .caseHeadline{
     margin: auto;
 }
+
+.loginBox > .box {
+    max-width: 270px;
+    min-width: 270px;
+}
+
+.btn {
+    background-color: #FFB73A;
+    color: white;
+    font-weight:400;
+    box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
+}
+
+.label, h1 {
+    color: #FFB73A
+}
