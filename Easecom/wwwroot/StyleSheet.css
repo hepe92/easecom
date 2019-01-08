@@ -2,7 +2,9 @@
     background-color: #323232;
     margin-bottom: 50px;
 }
-
+.container-fluid{
+    padding: 0;
+}
 html {
     position: relative;
     min-height: 100%;
@@ -74,4 +76,21 @@ img {
     color: white;
     box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
     font-weight: bold;
+    margin: 0 auto;
+    float: none;
+    
+}
+.box {
+    padding: 20px 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);
+    max-width: 90%;
+    margin: 0 auto;
+}
+#casecol{
+    padding: 0px;
+}
+
+.caseHeadline{
+    margin: auto;
 }
