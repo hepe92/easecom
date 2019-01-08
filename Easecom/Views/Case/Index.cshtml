@@ -6,7 +6,7 @@
     @foreach (var caseInfo in Model.ItemVMs)
     {
         <div class="col-sm-12 col-md-4" colspan="3">
-            <a asp-controller="Case"asp-route-id="@caseInfo.Id">
+            <a asp-controller="Case"asp-route-id="@caseInfo.Id" asp-action="Details">
                 <div class="card m-4" id="casecard">
                     <div class="card-body text-center">
                         <h5 class="card-title" style="font-weight: bold;">@caseInfo.Headline</h5>
