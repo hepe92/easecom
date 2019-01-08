@@ -11,9 +11,9 @@ html {
 .navbar {
     background-color: #323232;
     box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);
-    /* border-style: solid; */
-    /* border-width: 0px 1px 1px 1px; */
-    /* border-color: #FFB73A; */
+     /*border-style: solid; 
+     border-width: 0px 1px 1px 1px; 
+     border-color: #FFB73A;*/ 
     border-radius: 0 0 5px 5px;
 }
 
@@ -56,4 +56,22 @@ img {
     position: relative;
     top: 50%;
     transform: translate(0, -50%);
+}
+
+#casecard{
+    max-width: 100%;
+    overflow: hidden;
+    height: 112px;
+    background-color: #5E5E5E;
+    color: white;
+    box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
+}
+.card-text {
+    word-wrap: break-word
+}
+#yellowButton {
+    background-color: #FFB73A;
+    color: white;
+    box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
+    font-weight: bold;
 }
