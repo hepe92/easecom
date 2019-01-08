@@ -1,4 +1,8 @@
-﻿body {
+﻿
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
     background-color: #323232;
     margin-bottom: 50px;
 }
@@ -107,6 +111,10 @@ img {
     box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
 }
 
-.label, h1 {
-    color: #FFB73A
+ h2 {
+    color: #FFB73A;
+    font-weight: 500;
 }
+ label{
+     color: white;
+ }
