@@ -33,6 +33,7 @@ namespace Easecom.Models
             this.signInManager = signInManager;
 
             var b = context.Database.EnsureCreated();
+
         }
 
         public async Task<bool> TryLoginAsync(AccountLoginVM viewModel)
