@@ -22,12 +22,14 @@ namespace Easecom.Models.Entities
         public virtual DbSet<AspNetUserRoles> AspNetUserRoles { get; set; }
         public virtual DbSet<AspNetUserTokens> AspNetUserTokens { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public virtual DbSet<CaseFeed> CaseFeed { get; set; }
         public virtual DbSet<CaseTable> CaseTable { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=EasecomDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
@@ -128,6 +130,21 @@ namespace Easecom.Models.Entities
                 entity.Property(e => e.NormalizedUserName).HasMaxLength(256);
 
                 entity.Property(e => e.UserName).HasMaxLength(256);
+            });
+
+            modelBuilder.Entity<CaseFeed>(entity =>
+            {
+                entity.Property(e => e.Creator)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Message).IsRequired();
+
+                entity.HasOne(d => d.Case)
+                    .WithMany(p => p.CaseFeed)
+                    .HasForeignKey(d => d.CaseId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__CaseFeed__CaseId__5CD6CB2B");
             });
 
             modelBuilder.Entity<CaseTable>(entity =>

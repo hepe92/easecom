@@ -47,8 +47,6 @@ namespace Easecom.Controllers
 
         }
 
-
-
         [HttpGet]
         [Route("Details")]
         public async Task<IActionResult> Details(int id)
@@ -63,6 +61,14 @@ namespace Easecom.Controllers
             return View(await service.GetCaseDetailsByIdAsync(id));
         }
 
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await service.DeleteCaseByIdAsync(id);
+
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 }

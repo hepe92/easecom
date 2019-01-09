@@ -34,7 +34,6 @@ namespace Easecom.Models
             {
                 ItemVMs =
                 await context.CaseTable
-                //.OrderBy(o => o.Headline)
                 .Select(p => new CaseIndexItemVM
                 {
                     Headline = p.Headline,
@@ -60,6 +59,17 @@ namespace Easecom.Models
                 })
 
                 .SingleOrDefaultAsync(e => e.Id == id);
+        }
+
+        internal async Task DeleteCaseByIdAsync(int id)
+        {
+            var removeThisCase = await context.
+                CaseTable.
+                SingleOrDefaultAsync(e => e.Id == id);
+
+             context.Remove(removeThisCase);
+
+            await context.SaveChangesAsync();
         }
     }
 }
