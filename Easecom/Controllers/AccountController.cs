@@ -6,6 +6,7 @@ using Easecom.Models;
 using Easecom.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace Easecom.Controllers
 {
     public class AccountController : Controller
@@ -67,6 +68,13 @@ namespace Easecom.Controllers
 
             await accountService.AddAccountAsync(viewModel);
             return RedirectToAction(nameof(Login));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await accountService.TrySignOutAsync();
+            return RedirectToAction();
         }
     }
 }
