@@ -1,13 +1,11 @@
 ﻿@model CaseIndexVM
 @{ ViewBag.Title = "Case";}
 <div class="box">
-    <div class="row">
-        <div class="col-md-4 col-sm-12" id="headline">
+    <div class="row" id="createrow">
+        <div class="col-md-6 col-sm-12" id="headline">
             <h3 class="caseHeadline" style="color:white">Cases</h3>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 col-sm-12 align-items-center justify-content-center">
+        <div class="col-md-6 col-sm-12">
             <a asp-controller="Case" asp-action="CreateCase">
                 <div class="card m-4" id="yellowButton">
                     <div class="btn">
@@ -17,24 +15,24 @@
             </a>
         </div>
     </div>
-    <div class="row">
-        @foreach (var caseInfo in Model.ItemVMs)
-        {
-            <div class="col-sm-12 col-md-4" colspan="3" id="casecol">
-                <a asp-controller="Case" asp-route-id="@caseInfo.Id" asp-action="Details">
-                    <div class="card m-4" id="casecard">
-                        <div class="card-body text-center">
-                            <h5 class="card-header" style="font-weight: bold;">@caseInfo.Headline</h5>
-                            <p class="card-text"> @caseInfo.Description</p>
+        <div class="row">
+            @foreach (var caseInfo in Model.ItemVMs)
+            {
+                <div class="col-sm-12 col-md-4" colspan="3" id="casecol">
+                    <a asp-controller="Case" asp-route-id="@caseInfo.Id" asp-action="Details">
+                        <div class="card m-4" id="casecard">
+                            <div class="card-body text-center">
+                                <h5 class="card-header" style="font-weight: bold;">@caseInfo.Headline</h5>
+                                <p class="card-text"> @caseInfo.Description</p>
+                            </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            //<button asp-controller="Case" class="btn" asp-route-id="@caseInfo.Id">@caseInfo.Headline</button>
-        }
-    </div>
+                    </a>
+                </div>
+                //<button asp-controller="Case" class="btn" asp-route-id="@caseInfo.Id">@caseInfo.Headline</button>
+            }
+        </div>
 
-</div>
+    </div>
 @*<div class="row justify-content-center">
         <div class="col-md-4 col-sm-12" >
             <a asp-controller="Case" asp-action="CreateCase">
