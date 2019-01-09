@@ -54,6 +54,14 @@ namespace Easecom.Controllers
             return View(await service.GetCaseDetailsByIdAsync(id));
         }
 
+        [HttpGet]
+        [Route("EditCase")]
+        public async Task<IActionResult> EditCase(int id)
+        {
+            return View(await service.GetCaseDetailsByIdAsync(id));
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
