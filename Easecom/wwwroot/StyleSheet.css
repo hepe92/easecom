@@ -64,15 +64,31 @@ img {
     transform: translate(0, -50%);
 }
 
-#casecard{
-    max-width: 100%;
+.card-body.text-center{
+    padding: 0;
     overflow: hidden;
-    height: 112px;
+    text-overflow: ellipsis;
+}
+
+#casecard {
+    margin: 12px;
+    max-width: 100%;
+    min-width: 70%;
+    overflow: hidden;
+    height: 107px;
     background-color: #5E5E5E;
     color: white;
     box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
+    /*overflow: hidden;*/
 }
 .card-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: small;
+    padding: 10px;
+    max-height: 47px;
     word-wrap: break-word
 }
 #yellowButton {
@@ -80,10 +96,12 @@ img {
     color: white;
     box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
     font-weight: bold;
-    margin: 0 auto;
-    float: none;
-    
+    height: 40px;
+    width: 120px;
+
 }
+
+
 .box {
     padding: 20px 20px 20px 20px;
     border-radius: 10px;
@@ -127,6 +145,13 @@ img {
     border-radius: 5px;
     border-style: none;
 }
+#basic-addon2{
+    background-color: #FFB73A;
+    color: white;
+
+}
+
+
  /*.loginBox > .box > .form > .btn{
      display: inline-block;
      width: 190px;
