@@ -1,25 +1,30 @@
 ﻿@model AccountCreateVM
 @{ViewBag.Title = "Create Account";}
-    <style>
-        .btn {
-            background-color: #FFB73A
-        }
-        .label, h1 {
-            color: #FFB73A
-        }
-    </style>
-    <h1 align="center">Create New Account</h1>
-    <form align="center" asp-controller="Account" asp-action="CreateAccount">
-        <label class="label" asp-for="Username"></label>
-        <br />
-        <input asp-for="Username" />
-        <span asp-validation-for="Username"></span>
-        <br />
-        <label class="label" asp-for="Password"></label>
-        <br />
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-        <br />
-        <button type="submit" class="btn" style="margin: 10px">Create</button>
-        <br />
-    </form>
+<style>
+    .btn {
+        background-color: #FFB73A
+    }
+
+    .label, h1 {
+        color: #FFB73A
+    }
+</style>
+<div class="loginBox">
+    <div class="box">
+        <h1 align="center">Create New Account</h1>
+        <form align="center" asp-controller="Account" asp-action="CreateAccount">
+            <label class="label" asp-for="Username"></label>
+            <br />
+            <input asp-for="Username" />
+            <span asp-validation-for="Username"></span>
+            <br />
+            <label class="label" asp-for="Password"></label>
+            <br />
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+            <br />
+            <button type="submit" class="btn" style="margin: 10px">Create</button>
+            <br />
+        </form>
+    </div>
+</div>
