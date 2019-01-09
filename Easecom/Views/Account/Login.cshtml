@@ -1,24 +1,24 @@
 ﻿@model AccountLoginVM
 @{ViewBag.Title = "Login"; }
 
-    <div class="loginBox">
-        <div class="box">
-            <h2 align="center">Login</h2>
-            <form align="center" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">
-                <label class="label" asp-for="Username"></label>
-                <br />
-                <input asp-for="Username" value="user" />
-                <span asp-validation-for="Username"></span>
-                <br />
-                <label class="label" asp-for="Password"></label>
-                <br />
-                <input asp-for="Password" value="Password_123" />
-                <span asp-validation-for="Password"></span>
-                <br />
-                <button value="Login" type="submit" class="btn" style="margin: 10px">Login</button>
-                <br />
-                <button class="btn" asp-controller="Account" asp-action="CreateAccount">Register</button>
-
-            </form>
-        </div>
+<div class="loginBox">
+    <div class="box">
+        <h2 align="center">Login</h2>
+        <form align="center" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">
+            <label class="label" asp-for="Username"></label>
+            <br />
+            <input asp-for="Username" value="user" />
+            <span asp-validation-for="Username"></span>
+            <br />
+            <label class="label" asp-for="Password"></label>
+            <br />
+            <input asp-for="Password" value="Password_123" />
+            <span asp-validation-for="Password"></span>
+            <br />
+            <button value="Login" type="submit" class="btn" style="margin: 10px">Login</button>
+            <br />
+            <a class="btn" asp-controller="Account" asp-action="CreateAccount">Register</a>
+        </form>
     </div>
+    
+</div>
