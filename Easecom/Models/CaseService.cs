@@ -74,31 +74,25 @@ namespace Easecom.Models
             await context.SaveChangesAsync();
         }
 
+        //internal async Task EditCaseAsync(CaseEditVM editCase)
+        //{
+        //    CaseEditVM edit = context.CaseTable.Where(e => e.Id == editCase.Id).FirstOrDefaultAsync;
 
-        public async Task<CaseEditVM> EditCaseAsync(CaseEditVM caseEdit)
+        //    editCase.Headline
+        //    Description = editCase.Description
+        //    Creator = editCase.Creator
+
+        //    await context.SaveChangesAsync();
+        //}
+
+        public async Task<CaseTable> EditCaseAsync(int id)
         {
-            return await context.CaseTable.Select(e => new CaseEditVM
+            return await context.CaseTable.Select(e => new CaseTable
             {
                 Headline = e.Headline,
                 Description = e.Description
             })
-            .SingleOrDefaultAsync(o => o.Id == caseEdit.Id);
-        }
-
-        public async Task<CaseEditVM> GetEditDetailsByIdAsync(int id)
-        {
-            var b = await context.
-                CaseTable.
-                Select(o => new CaseEditVM
-                {
-                    Id = o.Id,
-                    Headline = o.Headline,
-                    Description = o.Description,
-                    Creator = o.Creator
-                })
-
-                .SingleOrDefaultAsync(e => e.Id == id);
-            return b;
+            .SingleOrDefaultAsync(o => o.Id == id);
         }
     }
 }

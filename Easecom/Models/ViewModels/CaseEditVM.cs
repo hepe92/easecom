@@ -8,7 +8,7 @@ namespace Easecom.Models.ViewModels
 {
     public class CaseEditVM
     {
-
+        [Required]
         public int Id { get; set; }
 
         [Required]
@@ -17,7 +17,7 @@ namespace Easecom.Models.ViewModels
         [Required]
         public string Description { get; set; }
 
-
+        [Required]
         public string Creator { get; set; }
     }
 }
