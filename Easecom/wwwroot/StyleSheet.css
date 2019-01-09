@@ -119,7 +119,14 @@ img {
  label{
      color: white;
  }
+.card-body {
+    border-radius: 10px;
+}
 
+#feed {
+    border-radius: 5px;
+    border-style: none;
+}
  /*.loginBox > .box > .form > .btn{
      display: inline-block;
      width: 190px;
