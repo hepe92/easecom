@@ -58,7 +58,7 @@ namespace Easecom.Controllers
         [Route("EditCase")]
         public async Task<IActionResult> EditCase(int id)
         {
-            return View(await service.GetCaseDetailsByIdAsync(id));
+            return View(await service.GetEditDetailsByIdAsync(id));
         }
 
         [HttpPost]
@@ -67,7 +67,7 @@ namespace Easecom.Controllers
         {
             if (!ModelState.IsValid)
                 return View(nameof(Index), await service.GetAllCasesAsync());
-            await service.EditCaseAsync(newCase.Id);
+            await service.EditCaseAsync(newCase);
             return RedirectToAction(nameof(Index));
 
         }
