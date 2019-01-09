@@ -4,11 +4,16 @@
 <div class="box">
     <h3 align="center" style="color:white">@Model.Headline</h3>
     <h4 align="center" style="color:white">Skapat av: @Model.Creator</h4>
+    <div class="col"></div>
+    <div class="card" style="box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
+        <a class="btn btn-info">Edit</a>
+        <a class="btn btn-danger">Delete</a>
+    </div>
     <div class="card" style="background-color:#5E5E5E; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
         <p align="center" style="color:white">@Model.Description</p>
     </div>
-    <div class="card" style="background-color:#5E5E5E; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
-        <input type="text"  class="form" placeholder="Input post">
-        <a class="btn">Post</a>
+    <div class="card" style="box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
+        <input type="text" class="form" placeholder="Input post">
+        <a class="btn">Send</a>
     </div>
 </div>
