@@ -63,11 +63,13 @@ namespace Easecom.Models
 
         internal async Task DeleteCaseByIdAsync(int id)
         {
-            var removeThisCase = await context.
-                CaseTable.
-                SingleOrDefaultAsync(e => e.Id == id);
+            var caseToRemove = await context.CaseTable.Where(e => e.Id == id).FirstOrDefaultAsync();
 
-             context.Remove(removeThisCase);
+            //var removeThisCase = await context.
+            //    CaseTable.
+            //    SingleOrDefaultAsync(e => e.Id == id);
+
+             context.Remove(caseToRemove);
 
             await context.SaveChangesAsync();
         }
