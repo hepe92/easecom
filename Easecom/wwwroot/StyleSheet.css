@@ -88,7 +88,8 @@ img {
     padding: 20px 20px 20px 20px;
     border-radius: 10px;
     box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);
-    max-width: 90%;
+    max-width: 830px;
+    
     margin: 0 auto;
 }
 #casecol{
@@ -118,3 +119,10 @@ img {
  label{
      color: white;
  }
+
+ /*.loginBox > .box > .form > .btn{
+     display: inline-block;
+     width: 190px;
+     height: 38px;
+     color: red;
+ }*/
