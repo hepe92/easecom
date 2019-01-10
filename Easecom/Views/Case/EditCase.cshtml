@@ -2,7 +2,7 @@
 @{ViewBag.title = "Edit Case";}
 
 <div class="box">
-    <form asp-controller="Case" asp-action="EditCase" asp->
+    <form asp-controller="Case" asp-action="EditCase">
         <div class="form-group">
             <label for="headline" style="color: white;">Headline</label>
             <input type="text" asp-for="Headline" value="@Model.Headline" class="form-control">
