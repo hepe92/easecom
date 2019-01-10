@@ -34,6 +34,7 @@ namespace Easecom.Models
             {
                 ItemVMs =
                 await context.CaseTable
+                .OrderByDescending(o => o.Id)
                 .Select(p => new CaseIndexItemVM
                 {
                     Headline = p.Headline,
