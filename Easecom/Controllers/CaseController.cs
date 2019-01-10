@@ -72,6 +72,13 @@ namespace Easecom.Controllers
 
         }
 
+        //[HttpPost]
+        //[Route("CreateFeedPost")]
+        //public async Task<IActionResult> CreateFeedPost(int id)
+        //{
+
+        //}
+
 
         [HttpGet]
         [Route("DeleteCase")]
