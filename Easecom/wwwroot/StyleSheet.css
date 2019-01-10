@@ -163,6 +163,10 @@ img {
     align-content: right;
 }
 
+/*.form-control{
+    height: 300px !important;
+}*/
+
  /*.loginBox > .box > .form > .btn{
      display: inline-block;
      width: 190px;
