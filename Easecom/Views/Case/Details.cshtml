@@ -1,9 +1,10 @@
 ﻿@model CaseDetailsVM
 @{ ViewBag.Title = "Case";}
+@{Html.RenderPartial("_HeaderNavBar");}
 
 <div class="box">
     <h3 align="center" style="color:white">@Model.Headline</h3>
-    <h4 align="center" style="color:white">Skapat av: @Model.Creator</h4>
+    <h6 align="center" style="color:white">Skapat av: @Model.Creator</h6>
     <div class="row justify-content-end" id="createrow">
         <div class="col-md-6 col-sm-12">
             <a asp-controller="Case" asp-action="EditCase" asp-route-id="@Model.Id">

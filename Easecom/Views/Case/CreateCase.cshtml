@@ -1,12 +1,13 @@
 ﻿@model CaseCreateVM
 @{ ViewBag.Title = "Create Case";}
+@{Html.RenderPartial("_HeaderNavBar");}
 
 <div class="box">
-    <form asp-controller="Case" asp-action="CreateCase" >
+    <form asp-controller="Case" asp-action="CreateCase">
         <div class="form-group">
             <label for="headline" style="color: white;">Headline</label>
             <input type="text" asp-for="Headline" class="form-control" aria-describedby="emailHelp" placeholder="Input headline">
-            
+
         </div>
         <div class="form-group">
             <label for="description" style="color: white;">Description</label>

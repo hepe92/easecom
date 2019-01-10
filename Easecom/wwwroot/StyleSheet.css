@@ -177,11 +177,12 @@ label {
     color: #fd4805;
 }
 
-.activeUser {
+.userName {
     color: #FFB73A;
     font-weight: bold;
     display: inline-block;
     padding-right: 10px;
     margin-bottom: 0px !important;
     text-transform: uppercase;
+    padding-left: 7px;
 }
