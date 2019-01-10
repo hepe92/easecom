@@ -143,7 +143,7 @@ namespace Easecom.Models.Entities
                 entity.HasOne(d => d.Case)
                     .WithMany(p => p.CaseFeed)
                     .HasForeignKey(d => d.CaseId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__CaseFeed__CaseId__5CD6CB2B");
             });
 
