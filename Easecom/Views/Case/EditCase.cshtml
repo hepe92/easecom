@@ -1,4 +1,4 @@
-﻿@model CaseEditVM
+﻿@model CaseDetailsVM
 @{ViewBag.title = "Edit Case";}
 
 <div class="box">
@@ -6,8 +6,8 @@
         <div class="form-group">
             <label for="headline" style="color: white;">Headline</label>
             <input type="text" asp-for="Headline" value="@Model.Headline" class="form-control">
-            <input type="text" asp-for="Creator" value="@Model.Creator" class="form-control">
-            <input type="text" asp-for="Id" value="@Model.Id" class="form-control">
+            <input hidden type="text" asp-for="Creator" value="@Model.Creator" class="form-control">
+            <input hidden type="text" asp-for="Id" value="@Model.Id" class="form-control">
         </div>
         <div class="form-group">
             <label for="description" style="color: white;">Description</label>

@@ -21,6 +21,7 @@ html {
      border-width: 0px 1px 1px 1px; 
      border-color: #FFB73A;*/ 
     border-radius: 0 0 5px 5px;
+    min-height: 50px;
 }
 
 
@@ -152,6 +153,15 @@ img {
 
 }
 
+.field-validation-error{
+    color: #fd4805;
+}
+.userName{
+    color: #FFB73A;
+    font-weight: bold;
+    text-align: right;
+    align-content: right;
+}
 
  /*.loginBox > .box > .form > .btn{
      display: inline-block;

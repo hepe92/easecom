@@ -63,18 +63,18 @@ namespace Easecom.Controllers
 
         [HttpPost]
         [Route("EditCase")]
-        public async Task<IActionResult> EditCase(int? id)
+        public async Task<IActionResult> EditCase(CaseEditVM ce)
         {
             if (!ModelState.IsValid)
                 return View(nameof(Index), await service.GetAllCasesAsync());
-            await service.EditCaseAsync(id);
+            await service.EditCaseAsync(ce);
             return RedirectToAction(nameof(Index));
 
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteCase(int id)
         {
             await service.DeleteCaseByIdAsync(id);
 

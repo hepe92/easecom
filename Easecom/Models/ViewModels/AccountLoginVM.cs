@@ -8,10 +8,10 @@ namespace Easecom.Models.ViewModels
 {
     public class AccountLoginVM
     {
-        [Required]
+        [Required(ErrorMessage = "Username does not exit")]
         public string Username { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Invalid password")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
 
