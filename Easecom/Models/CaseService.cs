@@ -47,7 +47,8 @@ namespace Easecom.Models
 
         public async Task<CaseDetailsVM> GetCaseDetailsByIdAsync(int id)
         {
-            return await context.
+            
+            var detail =  await context.
                 CaseTable.
                 Select(o => new CaseDetailsVM
                 {
@@ -55,10 +56,26 @@ namespace Easecom.Models
                     Headline = o.Headline,
                     Description = o.Description,
                     Creator = o.Creator
-
+                    
                 })
 
                 .SingleOrDefaultAsync(e => e.Id == id);
+            detail.FeedItemVMs = GetFeedItems(id);
+            return detail;
+        }
+
+        private CaseFeedItemVM[] GetFeedItems(int id)
+        {
+            return context.CaseFeed.Where(o => o.CaseId == id).Select(o => new CaseFeedItemVM
+            {
+                Creator = o.Creator,
+                Message = o.Message,
+                CaseId = o.CaseId,
+                Id=o.Id
+                
+            })
+            .ToArray();
+            
         }
 
         internal async Task DeleteCaseByIdAsync(int id)
@@ -69,21 +86,21 @@ namespace Easecom.Models
             //    CaseTable.
             //    SingleOrDefaultAsync(e => e.Id == id);
 
-             context.Remove(caseToRemove);
+            context.Remove(caseToRemove);
 
             await context.SaveChangesAsync();
         }
 
-        //internal async Task EditCaseAsync(CaseEditVM editCase)
-        //{
-        //    CaseEditVM edit = context.CaseTable.Where(e => e.Id == editCase.Id).FirstOrDefaultAsync;
+        internal async Task EditCaseAsync(CaseEditVM editCase)
+        {
+           // CaseEditVM edit = context.CaseTable.Where(e => e.Id == editCase.Id).FirstOrDefaultAsync;
 
-        //    editCase.Headline
-        //    Description = editCase.Description
-        //    Creator = editCase.Creator
-
-        //    await context.SaveChangesAsync();
-        //}
+           // //editCase.Headline
+           // Description = editCase.Description,
+           // Creator = editCase.Creator;
+        
+           //await context.SaveChangesAsync();
+        }
 
         public async Task<CaseTable> EditCaseAsync(int? id)
         {
@@ -97,4 +114,10 @@ namespace Easecom.Models
             .SingleOrDefaultAsync(o => o.Id == id);
         }
     }
+
+
+
 }
+
+
+

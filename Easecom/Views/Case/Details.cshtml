@@ -19,26 +19,30 @@
         </div>
     </div>
 
+
+
     <div class="card-body d-flex align-items-center" style="background-color:#5E5E5E; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
+        <p align="center" style="color:white">@Model.Description</p>
+    </div>
+
+    <div class="container" style="background-color:#5E5E5E; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
         @foreach (var item in Model.FeedItemVMs)
         {
-            <div class="card d-flex align-items-left" style="background-color:#5E5E5E; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
-               <p></p>
-            
-            </div>
-         }
-         </div>
+            <div class="container" style="background-color:gray; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
+                <p style="font-weight:bold">@item.Creator</p>
+                <p>@item.Message</p>
+                <p>@item.CaseId</p>
 
-            <div class="card-body d-flex align-items-center" style="background-color:#5E5E5E; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
-                <p align="center" style="color:white">@Model.Description</p>
             </div>
+        }
+    </div>
 
-            <div class="input-group mb-3" id="input">
-                <input type="text" class="form-control" placeholder="Text goes here..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-                <div class="input-group-append">
-                    <span class="input-group-text btn" id="postbtn">Post</span>
-                </div>
-            </div>
-
+    <div class="input-group mb-3" id="input">
+        <input type="text" class="form-control" placeholder="Text goes here..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <span class="input-group-text btn" id="postbtn">Post</span>
         </div>
+    </div>
+
+</div>
 
