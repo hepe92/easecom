@@ -152,6 +152,10 @@ img {
 
 }
 
+.field-validation-error{
+    color: #fd4805;
+}
+
 
  /*.loginBox > .box > .form > .btn{
      display: inline-block;
