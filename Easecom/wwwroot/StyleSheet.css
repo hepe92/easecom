@@ -2,13 +2,16 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
 body {
     background-color: #323232;
     margin-bottom: 50px;
 }
-.container-fluid{
+
+.container-fluid {
     padding: 0;
 }
+
 html {
     position: relative;
     min-height: 100%;
@@ -17,9 +20,9 @@ html {
 .navbar {
     background-color: #323232;
     box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);
-     /*border-style: solid; 
+    /*border-style: solid; 
      border-width: 0px 1px 1px 1px; 
-     border-color: #FFB73A;*/ 
+     border-color: #FFB73A;*/
     border-radius: 0 0 5px 5px;
     min-height: 50px;
 }
@@ -39,13 +42,26 @@ html {
 
 .footer {
     background-color: #323232;
-    padding: 30px 30px 30px 30px;
-    border-top: 1px solid #FFB73A;
+    position: absolute;
     height: 50px;
+    bottom: 0;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px -3px 10px -1px rgb(27, 27, 27);
+    margin: 0;
+    padding: 10px;
 }
 
+    .footer p {
+        color: #FFB73A;
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        font-size: small;
+    }
+
 img {
-    display: block;
+    display: inline-block;
 }
 
 #logo {
@@ -57,11 +73,12 @@ img {
     float: right;
     font-size: 10pt;
 }
-#createrow{
+
+#createrow {
     padding-left: 24px;
 }
 
-.card-body.text-center{
+.card-body.text-center {
     padding: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -80,6 +97,7 @@ img {
     /*white-space: nowrap;*/
     /*overflow: hidden;*/
 }
+
 .card-text {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -88,6 +106,7 @@ img {
     max-height: 47px;
     word-wrap: break-word
 }
+
 #yellowButton {
     background-color: #FFB73A;
     color: white;
@@ -96,8 +115,6 @@ img {
     height: 40px;
     width: 120px;
     float: right;
-    
-
 }
 
 
@@ -106,17 +123,18 @@ img {
     border-radius: 10px;
     box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);
     max-width: 830px;
-    
     margin: 0 auto;
 }
-#casecol{
+
+#casecol {
     padding: 0px;
 }
-#headline{
-    padding: unset;
 
+#headline {
+    padding: unset;
 }
-.caseHeadline{
+
+.caseHeadline {
     margin: auto;
 }
 
@@ -128,17 +146,19 @@ img {
 .btn {
     background-color: #FFB73A;
     color: white;
-    font-weight:400;
+    font-weight: 400;
     box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
 }
 
- h2 {
+h2 {
     color: #FFB73A;
     font-weight: 500;
 }
- label{
-     color: white;
- }
+
+label {
+    color: white;
+}
+
 .card-body {
     border-radius: 10px;
 }
@@ -147,29 +167,21 @@ img {
     border-radius: 5px;
     border-style: none;
 }
-#basic-addon2{
+
+#basic-addon2 {
     background-color: #FFB73A;
     color: white;
-
 }
 
-.field-validation-error{
+.field-validation-error {
     color: #fd4805;
 }
-.userName{
+
+.activeUser {
     color: #FFB73A;
     font-weight: bold;
-    text-align: right;
-    align-content: right;
+    display: inline-block;
+    padding-right: 10px;
+    margin-bottom: 0px !important;
+    text-transform: uppercase;
 }
-
-/*.form-control{
-    height: 300px !important;
-}*/
-
- /*.loginBox > .box > .form > .btn{
-     display: inline-block;
-     width: 190px;
-     height: 38px;
-     color: red;
- }*/
