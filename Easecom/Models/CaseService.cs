@@ -77,19 +77,22 @@ namespace Easecom.Models
             .ToArray();
             
         }
-
+        
         internal async Task DeleteCaseByIdAsync(int id)
         {
+
+            await context.CaseFeed.Where(e => e.CaseId == id).ToArrayAsync();
             var caseToRemove = await context.CaseTable.Where(e => e.Id == id).FirstOrDefaultAsync();
 
             //var removeThisCase = await context.
             //    CaseTable.
             //    SingleOrDefaultAsync(e => e.Id == id);
 
+            //context.Remove(feedToRemove);
             context.Remove(caseToRemove);
-
             await context.SaveChangesAsync();
         }
+
 
         public async Task EditCaseAsync(CaseEditVM editedCase)
         {

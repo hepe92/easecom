@@ -73,7 +73,8 @@ namespace Easecom.Controllers
         }
 
 
-        [HttpPost]
+        [HttpGet]
+        [Route("DeleteCase")]
         public async Task<IActionResult> DeleteCase(int id)
         {
             await service.DeleteCaseByIdAsync(id);
