@@ -3,6 +3,8 @@
         <a asp-controller="Case" asp-action="Index">
             <img src="~/img/easecom.png" class="img" width="140" height="auto" />
         </a>
-        <h6 class="userName">@User.Identity.Name</h6>
+        <div class="activeUser">
+            <h6 class="userName"><i class="material-icons">person</i>@User.Identity.Name</h6>
+        </div>
     </nav>
 </div>
