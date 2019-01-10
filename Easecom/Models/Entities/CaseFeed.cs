@@ -9,6 +9,7 @@ namespace Easecom.Models.Entities
         public int CaseId { get; set; }
         public string Creator { get; set; }
         public string Message { get; set; }
+        public DateTime? PostDateTime { get; set; }
 
         public virtual CaseTable Case { get; set; }
     }
