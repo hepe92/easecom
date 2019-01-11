@@ -20,9 +20,6 @@ html {
 .navbar {
     background-color: #323232;
     box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);
-    /*border-style: solid; 
-     border-width: 0px 1px 1px 1px; 
-     border-color: #FFB73A;*/
     border-radius: 0 0 5px 5px;
     min-height: 50px;
 }
@@ -94,8 +91,6 @@ img {
     color: white;
     box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
     text-overflow: ellipsis;
-    /*white-space: nowrap;*/
-    /*overflow: hidden;*/
 }
 
 .card-text {
@@ -149,6 +144,10 @@ img {
     font-weight: 400;
     box-shadow: 1px 6px 10px -1px rgb(27, 27, 27);
 }
+#actionButtons{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
 
 h2 {
     color: #FFB73A;
@@ -177,11 +176,17 @@ label {
     color: #fd4805;
 }
 
-.activeUser {
+.userName {
     color: #FFB73A;
     font-weight: bold;
     display: inline-block;
     padding-right: 10px;
     margin-bottom: 0px !important;
     text-transform: uppercase;
+    padding-left: 7px;
+}
+#descBox {
+    background-color: #5E5E5E;
+    box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);
+    margin-bottom: 10px;
 }
