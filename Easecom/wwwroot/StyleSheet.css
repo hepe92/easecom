@@ -210,13 +210,6 @@ label {
     margin-bottom: unset;
 }
 
-.chatUser {
-    color: #FFB73A;
-    font-weight: bold;
-    margin-bottom: unset;
-    padding: 5px;
-}
-
 #chatContainer {
     padding: 10px;
     background-color: #5E5E5E;
@@ -237,4 +230,26 @@ label {
 }
 #inputBtn{
     box-shadow: none;
+}
+.chatUser {
+    color: #FFB73A;
+    font-weight: bold;
+    margin-bottom: unset;
+    padding: 5px;
+}
+
+#chatBoxesReply {
+    background-color: #323232;
+    color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+#chatBoxesSend {
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    color: #323232;
+    text-align: end;
+    padding-bottom:5px;
 }

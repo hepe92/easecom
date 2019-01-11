@@ -30,11 +30,22 @@
     <div class="container" id="chatContainer">
         @foreach (var item in Model.FeedItemVMs)
         {
-            <div class="container" id="chatBoxes">
-                <p class="chatUser">@item.Creator</p>
-                <p class="chatMessage">@item.Message</p>
-                @*<p>@item.PostDateTime.ToShortDateString()</p>*@
-            </div>
+            if (item.Creator == User.Identity.Name)
+            {
+                <div class="container" id="chatBoxesSend">
+                    <p class="chatUser">You</p>
+                    <p class="chatMessage">@item.Message</p>
+                    @*<p>@item.PostDateTime.ToShortDateString()</p>*@
+                </div>
+            }
+            else
+            {
+                <div class="container" id="chatBoxesReply">
+                    <p class="chatUser">@item.Creator</p>
+                    <p class="chatMessage">@item.Message</p>
+                    @*<p>@item.PostDateTime.ToShortDateString()</p>*@
+                </div>
+            }
         }
     </div>
     <form asp-controller="Case" asp-action="CreateFeedPost">
