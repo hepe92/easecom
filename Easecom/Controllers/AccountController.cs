@@ -69,12 +69,12 @@ namespace Easecom.Controllers
             await accountService.AddAccountAsync(viewModel);
             return RedirectToAction(nameof(Login));
         }
-
-        [HttpPost]
-        public async Task<IActionResult> Logout()
-        {
-            await accountService.TrySignOutAsync();
-            return RedirectToAction();
-        }
+        ////TODO Implementera Logout
+        //[HttpPost]
+        //public async Task<IActionResult> Logout()
+        //{
+        //    await accountService.TrySignOutAsync();
+        //    return RedirectToAction();
+        //}
     }
 }
