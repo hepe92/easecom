@@ -10,6 +10,7 @@ namespace Easecom.Models.ViewModels
     {
         public CaseFeedItemVM[] FeedItemVMs { get; set; }
 
+
         public int Id { get; set; }
         [Required]
         public string Headline { get; set; }
@@ -19,13 +20,12 @@ namespace Easecom.Models.ViewModels
         public string Creator { get; set; }
 
     }
-
     public class CaseFeedItemVM
     {
         public int Id { get; set; }
         public int CaseId { get; set; }
         public string Message { get; set; }
         public string Creator { get; set; }
-        public DateTime? PostDateTime { get; set; }
+        public DateTime PostDateTime { get; set; }
     }
 }

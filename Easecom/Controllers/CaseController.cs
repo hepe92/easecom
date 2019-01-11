@@ -48,7 +48,7 @@ namespace Easecom.Controllers
         }
 
         [HttpGet]
-        [Route("Details")]
+        [Route("Details/{id}")]
         public async Task<IActionResult> Details(int id)
         {
             return View(await service.GetCaseDetailsByIdAsync(id));
@@ -72,12 +72,20 @@ namespace Easecom.Controllers
 
         }
 
-        //[HttpPost]
-        //[Route("CreateFeedPost")]
-        //public async Task<IActionResult> CreateFeedPost(int id)
-        //{
+        [HttpPost]
+        [Route("CreateFeedPost")]
+        public async Task<IActionResult> CreateFeedPost(string message,int id)
+        {
+            CaseFeedItemVM newFeedMessage = new CaseFeedItemVM();
+            newFeedMessage.CaseId = id;
+            newFeedMessage.Message = message;
+            newFeedMessage.Creator = User.Identity.Name;
+            newFeedMessage.PostDateTime = DateTime.Now;
 
-        //}
+            await service.CreateFeedMessageAsync(newFeedMessage);
+
+            return Redirect("Details/" + id);
+        }
 
 
         [HttpGet]

@@ -9,13 +9,12 @@ namespace Easecom.Models.ViewModels
     public class CaseCreateVM
     {
         [Display(Name = "Headline")]
-        [Required(ErrorMessage = "Enter a headline!")]
+        [Required(ErrorMessage = "Enter a headline")]
         public string Headline { get; set; }
 
-        [Required(ErrorMessage = "Enter a Description!")]
+        [Required(ErrorMessage = "Enter a Description")]
         public string Description { get; set; }
 
-        //[Required(ErrorMessage = "Enter a creator name!")]
         public string Creator { get; set; }
     }
 }
