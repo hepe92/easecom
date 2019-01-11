@@ -148,6 +148,7 @@ img {
 #actionButtons {
     margin-bottom: 10px;
     margin-left: 10px;
+    margin-top: 10px;
 }
 
 h2 {
@@ -223,7 +224,17 @@ label {
     box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);
     padding-right: 20px;
     margin-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+
 }
 #inputField{
-    border-radius: 2px;
+    border-radius: 4px 0px 0px 4px;
+}
+.detailsHeadline{
+
+    color: white;
+}
+#inputBtn{
+    box-shadow: none;
 }

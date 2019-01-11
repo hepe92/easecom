@@ -21,11 +21,12 @@
     </div>
 
 
+    <h6 class="detailsHeadline">Description</h6>
 
     <div class="card-body d-flex align-items-center" id="descBox">
         <p align="center" style="color:white">@Model.Description</p>
     </div>
-
+    <h6 class="detailsHeadline">Feed</h6>
     <div class="container" id="chatContainer">
         @foreach (var item in Model.FeedItemVMs)
         {
@@ -38,10 +39,10 @@
     </div>
     <form asp-controller="Case" asp-action="CreateFeedPost">
         <div class="input-group mb-3" id="input">
-            <input hidden value="@Model.Id" name="id"/>
-            <input type="text" name="message" class="form-control" placeholder="Post Message" required>
+            <input hidden value="@Model.Id" name="id" />
+            <input id="inputField" type="text" name="message" class="form-control" placeholder="Post Message" required>
             <div class="input-group-append">
-                <button type="submit" class="btn btn-primary" style="background-color: #FFB73A">Submit</button>
+                <button type="submit" id="inputBtn" class="btn" style="background-color: #FFB73A">Submit</button>
             </div>
         </div>
     </form>
