@@ -26,12 +26,12 @@
         <p align="center" style="color:white">@Model.Description</p>
     </div>
 
-    <div class="container" style="background-color:#5E5E5E; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
+    <div class="container" id="chatContainer">
         @foreach (var item in Model.FeedItemVMs)
         {
-            <div class="container" style="background-color:gray; box-shadow: 1px 3px 10px -1px rgb(27, 27, 27);">
-                <p style="font-weight:bold">@item.Creator</p>
-                <p>@item.Message</p>
+            <div class="container" id="chatBoxes">
+                <p class="chatUser">@item.Creator</p>
+                <p class="chatMessage">@item.Message</p>
                 @*<p>@item.PostDateTime.ToShortDateString()</p>*@
 
             </div>
@@ -40,7 +40,7 @@
     <form asp-controller="Case" asp-action="CreateFeedPost">
         <div class="input-group mb-3" id="input">
             <input hidden value="@Model.Id" name="id"/>
-            <input type="text" name="message" class="form-control" placeholder="Post Message">
+            <input type="text" id="inputField" name="message" class="form-control" placeholder="Post Message">
             <div class="input-group-append">
                 <button type="submit" class="btn btn-primary" style="background-color: #FFB73A">Submit</button>
             </div>
