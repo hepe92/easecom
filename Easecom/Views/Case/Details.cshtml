@@ -33,19 +33,17 @@
                 <p class="chatUser">@item.Creator</p>
                 <p class="chatMessage">@item.Message</p>
                 @*<p>@item.PostDateTime.ToShortDateString()</p>*@
-
             </div>
         }
     </div>
     <form asp-controller="Case" asp-action="CreateFeedPost">
         <div class="input-group mb-3" id="input">
             <input hidden value="@Model.Id" name="id"/>
-            <input type="text" id="inputField" name="message" class="form-control" placeholder="Post Message">
+            <input type="text" name="message" class="form-control" placeholder="Post Message" required>
             <div class="input-group-append">
                 <button type="submit" class="btn btn-primary" style="background-color: #FFB73A">Submit</button>
             </div>
         </div>
     </form>
-
 </div>
 

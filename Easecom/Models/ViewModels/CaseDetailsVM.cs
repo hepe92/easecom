@@ -24,6 +24,7 @@ namespace Easecom.Models.ViewModels
     {
         public int Id { get; set; }
         public int CaseId { get; set; }
+        [Required]
         public string Message { get; set; }
         public string Creator { get; set; }
         public DateTime PostDateTime { get; set; }
