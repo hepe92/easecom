@@ -13,12 +13,12 @@
         <form class="form" align="center" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">
             <label class="label" asp-for="Username"></label>
             <br />
-            <input asp-for="Username" value="user" />
+            <input asp-for="Username" />
             <span asp-validation-for="Username"></span>
             <br />
             <label class="label" asp-for="Password"></label>
             <br />
-            <input asp-for="Password" value="Password_123" />
+            <input asp-for="Password"  />
             <span asp-validation-for="Password"></span>
             <br />
             <button value="Login" type="submit" id="smallButton" class="btn" style="margin: 10px">Login</button>

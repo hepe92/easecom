@@ -19,7 +19,7 @@
     <div class="row">
         @foreach (var caseInfo in Model.ItemVMs)
         {
-            <div class="col-sm-12 col-md-4" colspan="3" id="casecol">
+            <div class="col-sm-12 col-lg-4 col-md-6" colspan="3" id="casecol">
                 <a asp-controller="Case" asp-route-id="@caseInfo.Id" asp-action="Details">
                     <div class="card m-4" id="casecard">
                         <div class="card-body text-center">
